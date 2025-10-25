@@ -1,0 +1,397 @@
+/* Global Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #007BFF; /* Muted Blue */
+    --secondary-color: #28a745; /* Success Green */
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529; /* Dark Grey for contrast */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ----------------------------------------------------------- */
+/* Header & Navigation */
+/* ----------------------------------------------------------- */
+header {
+    background: var(--dark-bg); /* Dark header for professional look */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ----------------------------------------------------------- */
+/* General Sections & Typography */
+/* ----------------------------------------------------------- */
+.section {
+    padding: 80px 0; /* More padding for cleaner look */
+    text-align: center;
+}
+
+.dark-bg {
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.dark-bg h2 {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--light-bg) 0%, #e3f2fd 100%);
+    padding: 100px 0;
+    text-align: left;
+}
+
+.hero .container {
+    max-width: 900px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    transition: background-color 0.3s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button:hover {
+    background: #1e7e34;
+    transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------------- */
+/* Service & Course Cards (Unified Card Style) */
+/* ----------------------------------------------------------- */
+.course-intro {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.dark-bg .course-intro {
+    color: #bbb;
+}
+
+.service-grid, .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card, .course-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--primary-color); /* Feature border */
+}
+
+.course-card {
+    /* Different styling for courses in dark section */
+    background: rgba(255, 255, 255, 0.95);
+    border-top-color: var(--secondary-color);
+}
+
+.service-card:hover, .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.service-card h3, .course-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.service-card p, .course-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 40px; 
+}
+
+.price {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary-color); 
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.buy-button:hover {
+    background: #1e7e34;
+}
+
+/* ----------------------------------------------------------- */
+/* Reseller Section */
+/* ----------------------------------------------------------- */
+#reseller {
+    background-color: var(--light-bg);
+}
+
+.ledger-display {
+    margin: 30px auto;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #777;
+}
+
+/* ----------------------------------------------------------- */
+/* Contact Form (Styled for Dark BG) */
+/* ----------------------------------------------------------- */
+#contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 5px;
+    background-color: #333; /* Darker input field */
+    color: white;
+}
+#contact-form input::placeholder, #contact-form textarea::placeholder {
+    color: #aaa;
+}
+#contact-form .button {
+    background: var(--primary-color);
+}
+#contact-form .button:hover {
+    background: #0056b3;
+}
+.dark-bg .form-note {
+    color: #888;
+}
+
+
+/* ----------------------------------------------------------- */
+/* Footer */
+/* ----------------------------------------------------------- */
+footer {
+    background: var(--dark-bg);
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------------- */
+/* Modal Styles (Same as before, but with variables) */
+/* ----------------------------------------------------------- */
+.modal {
+    /* ... (Same as before) ... */
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 500px; /* Slightly smaller for mobile modal */
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upi-card {
+    border: 2px dashed var(--primary-color);
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+.upi-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.upi-id {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.upi-pay-button {
+    width: 100%; 
+    display: block;
+    background: var(--primary-color);
+}
+
+.upi-pay-button:hover {
+    background: #0056b3;
+}
+
+.final-step-button {
+    margin-top: 20px;
+    background: #dc3545; /* Red for final action */
+}
+
+.final-step-button:hover {
+    background: #c82333;
+}
+
+
+/* Loading Overlay (The 'Wait' Screen) */
+.loading-modal {
+    padding-top: 20%;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.loading-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.loading-content h2 {
+    font-size: 2rem;
+    margin: 15px 0;
+    color: white;
+}
+
+/* Spinner Animation */
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid white; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ----------------------------------------------------------- */
+/* Media Queries for Desktop (Mobile First Design) */
+/* ----------------------------------------------------------- */
+@media (min-width: 768px) {
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .hero {
+        padding: 120px 0;
+    }
+    .hero h2 {
+        font-size: 3.5rem;
+    }
+}
