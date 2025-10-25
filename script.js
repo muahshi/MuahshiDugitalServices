@@ -44,7 +44,7 @@ buyButtons.forEach(button => {
         upiLink1.textContent = `Pay Now (₹${coursePrice})`;
         
         // 3. Proof Form Link Update (IMPORTANT: Aapko Google Form URL set karna hai)
-        let formBaseUrl = "YOUR_GOOGLE_FORM_LINK_FOR_PROOF_SUBMISSION"; 
+        let formBaseUrl = "https://forms.gle/t7EXsFhWWGhWrYZMA"; 
         proofFormLink.href = formBaseUrl;
         
         // Show Modal
