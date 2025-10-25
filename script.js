@@ -35,7 +35,7 @@ buyButtons.forEach(button => {
 
         // 2. UPI Link Update (am=amount, tn=transaction note)
         // 🚨 YOUR SPECIFIC UPI ID 🚨
-        const upiId = "muahshi7789@ybl"; 
+        const upiId = "muahshi7759@axl"; 
         const baseUpi = `upi://pay?pa=${upiId}&pn=Muahshi&cu=INR`;
         
         // Creating the specific UPI link for this transaction
